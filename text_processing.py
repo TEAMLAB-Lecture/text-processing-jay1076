@@ -51,6 +51,8 @@ def normalize(input_string):
 
         elif ord(input_string[k])>32:
             s+=input_string[k]
+    if len(s)==0:
+        return s
 
     if s[len(s)-1]==" ":
         normalized_string = s[:len(s)-1]
@@ -82,11 +84,14 @@ def no_vowels(input_string):
     """
     l=len(input_string)
     s=""
+    if l==0:
+        return s
     for k in range(0, l):
         tmp=ord(input_string[k])
         if tmp!=97 and tmp!=101 and tmp!=105 and tmp!=111 and tmp!=117:
             if tmp!=65 and tmp!=69 and tmp!=73 and tmp!=79 and tmp!=85:
                 s+=input_string[k]
-    
+    if len(s)==0:
+        return s    
     no_vowel_string = s
     return no_vowel_string
