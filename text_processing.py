@@ -53,7 +53,7 @@ def normalize(input_string):
             s+=input_string[k]
 
     if s[len(s)-1]==" ":
-        normalized_string = s[:len(s)-2]
+        normalized_string = s[:len(s)-1]
     else:
         normalized_string = s
     return normalized_string
